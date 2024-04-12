@@ -1,4 +1,4 @@
-export default function SunIcon({ className }: ClassNameProps) {
+export default function SunIcon({ className }: { className: string }) {
   return (
     <svg
       width="31px"

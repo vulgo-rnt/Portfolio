@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/patterns/header";
 import DefaultContanier from "@/components/default-contanier";
+import Menu from "@/components/menu";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -16,7 +17,8 @@ export default function RootLayout({
     <html lang="pt-br">
       <DefaultContanier>
         <Header />
-        <div className="relative -z-20">{children}</div>
+        <Menu />
+        {children}
       </DefaultContanier>
     </html>
   );
