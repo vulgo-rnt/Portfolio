@@ -20,7 +20,7 @@ const config: Config = {
         bg_dark: "#0d1117",
         bg: "#ffffff",
         slide_dark: "#0f141e",
-        slide: "white",
+        slide: "black",
       },
     },
   },

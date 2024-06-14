@@ -1,4 +1,4 @@
-export default function DarkIcon({ className }: ClassNameProps) {
+export default function DarkIcon({ className }: { className: string }) {
   return (
     <svg
       className={className}

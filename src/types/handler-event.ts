@@ -1,3 +1,0 @@
-interface HandlerEvent {
-  handler: () => void;
-}
