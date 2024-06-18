@@ -1,16 +1,19 @@
 import Link from "next/link";
+import { LogoIcon } from "./icons/logo";
 
 export default function Logo() {
   return (
-    <Link href="/" className="flex gap-4 items-center">
-      <span className="hidden md:flex border-primary border-2 p-2 text-primary rounded-[100%]">
-        <span className="w-[24px] text-center font-medium">R</span>
-      </span>
-      <span className="flex flex-col">
-        <span className="font-medium text-3xl dark:text-primary_dark text-primary">
+    <Link
+      href="/"
+      className="flex gap-4 items-center"
+      aria-label="Logo Go Home"
+    >
+      <LogoIcon />
+      <span className="flex flex-col max-xsm:hidden transition-colors duration-700">
+        <span className="font-medium text-3xl dark:text-color_btn_dark text-primary">
           Renan Toniolo
         </span>
-        <span className="text-sm text-secondary dark:text-secondary_dark tracking-[4px]">
+        <span className="text-sm text-secondary tracking-[4px]">
           Desenvolvedor Web
         </span>
       </span>
