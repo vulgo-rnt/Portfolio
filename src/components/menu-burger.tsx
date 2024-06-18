@@ -1,14 +1,15 @@
 "use client";
-
+import "@/styles/burger-menu.css";
 import { useMenu } from "@/context/menu-context";
-import Hamburger from "hamburger-react";
+import { Squash as Hamburger } from "hamburger-react";
 
 export default function MenuBurger() {
   const { isOpen, setIsOpen } = useMenu();
 
   return (
     <Hamburger
-      color="#31363F"
+      aria-label="Menu Button"
+      rounded
       toggled={isOpen}
       onToggle={(toggle) => setIsOpen(toggle)}
     />
