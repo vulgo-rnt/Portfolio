@@ -1,0 +1,16 @@
+.swiper-pagination-bullet-active {
+  @apply bg-tertiary !important;
+}
+
+.swiper-pagination-bullet {
+  @apply dark:bg-white;
+}
+
+.swiper {
+  @apply pb-10;
+  @apply max-w-[770px];
+}
+
+.swiper-slide {
+  @apply flex justify-center;
+}
