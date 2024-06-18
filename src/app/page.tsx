@@ -36,6 +36,7 @@ export default function Home() {
   return (
     <main className="flex flex-col mb-8 gap-5 ">
       <SlideAnimation
+        duration={0.7}
         animate="right"
         tag="section"
         className="text-primary flex flex-col gap-6 max-sm:items-center max-sm:text-xs"
