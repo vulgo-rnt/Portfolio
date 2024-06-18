@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import DarkIcon from "./icons/dark-mode";
-import SunIcon from "./icons/sun-mode";
+import { Moon, Sun } from "./icons/@index";
 
 export default function BtnScreenMode() {
   const [mode, setMode] = useState<boolean>(false);
@@ -13,12 +12,8 @@ export default function BtnScreenMode() {
   };
 
   return (
-    <button type="button" onClick={handleClick}>
-      {mode ? (
-        <SunIcon className="stroke-white" />
-      ) : (
-        <DarkIcon className="fill-black" />
-      )}
+    <button aria-label="Screen Mode" type="button" onClick={handleClick}>
+      {mode ? <Sun /> : <Moon />}
     </button>
   );
 }

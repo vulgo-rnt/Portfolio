@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Header from "@/patterns/header";
 import DefaultContanier from "@/components/default-contanier";
 import Menu from "@/components/menu";
+import Footer from "@/patterns/footer";
+import "@/styles/scroll-bar.css";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,6 +21,7 @@ export default function RootLayout({
         <Header />
         <Menu />
         {children}
+        <Footer />
       </DefaultContanier>
     </html>
   );
