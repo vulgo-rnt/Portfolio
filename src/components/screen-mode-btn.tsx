@@ -1,14 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Moon, Sun } from "./icons/@index";
 
 export default function BtnScreenMode() {
-  const [mode, setMode] = useState<boolean>(false);
+  const [mode, setMode] = useState(false);
+
+  useEffect(() => {
+    if (typeof localStorage === "undefined") return;
+    const saveMode = JSON.parse(localStorage.getItem("dark-mode") ?? "false");
+    setMode(saveMode);
+  }, []);
+
+  useEffect(() => {
+    document.querySelector("body")?.classList.toggle("dark");
+  }, [mode]);
 
   const handleClick = () => {
-    setMode((prev) => !prev);
-    document.querySelector("body")?.classList.toggle("dark");
+    setMode((prev) => {
+      localStorage.setItem("dark-mode", JSON.stringify(!prev));
+      return !prev;
+    });
   };
 
   return (
