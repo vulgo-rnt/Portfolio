@@ -1,16 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { Moon, Sun } from "./icons/@index";
+import { useScreenMode } from "@/context/screen-mode-context";
 
 export default function BtnScreenMode() {
-  const [mode, setMode] = useState<boolean>(false);
-
-  const handleClick = () => {
-    setMode((prev) => !prev);
-    document.querySelector("body")?.classList.toggle("dark");
-  };
-
+  const { handleClick, mode } = useScreenMode();
   return (
     <button aria-label="Screen Mode" type="button" onClick={handleClick}>
       {mode ? <Sun /> : <Moon />}

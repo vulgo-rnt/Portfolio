@@ -13,7 +13,7 @@ export default function Logo() {
         <span className="font-medium text-3xl dark:text-color_btn_dark text-primary">
           Renan Toniolo
         </span>
-        <span className="text-sm text-secondary tracking-[4px]">
+        <span className="text-sm text-secondary dark:text-secondary_dark tracking-[4px]">
           Desenvolvedor Web
         </span>
       </span>

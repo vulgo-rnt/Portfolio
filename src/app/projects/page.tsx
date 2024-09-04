@@ -7,11 +7,19 @@ import {
   CardWatchBtc,
   CardPokedex,
 } from "@/components/projects-cards/@index";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projetos",
+  description: "",
+};
 
 export default function Page() {
   return (
     <main>
-      <h1>Confira meus projetos</h1>
+      <h1 className="text-2xl dark:text-color_btn pb-8">
+        Confira meus projetos
+      </h1>
       <Carousel>
         <CardCapputeeno />
         <CardBreweries />

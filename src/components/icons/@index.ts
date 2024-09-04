@@ -35,3 +35,5 @@ export * from "@/components/icons/projects";
 export * from "@/components/icons/about";
 export * from "@/components/icons/logo";
 export * from "@/components/icons/btc";
+export * from "@/components/icons/puppeteer";
+export * from "@/components/icons/javascript";

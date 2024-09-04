@@ -18,7 +18,7 @@ export default function ScrollTopBtn() {
           exit={{ opacity: 0, y: "-50%" }}
           transition={{ duration: 0.5 }}
           onClick={handleClick}
-          className="fixed bottom-10 right-2"
+          className="fixed bottom-10 right-2 z-20"
         >
           <TopBtn />
         </motion.button>

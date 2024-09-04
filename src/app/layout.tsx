@@ -6,7 +6,10 @@ import Footer from "@/patterns/footer";
 import "@/styles/scroll-bar.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: {
+    template: "%s | Portfólio",
+    default: "Home",
+  },
   description: "",
 };
 
