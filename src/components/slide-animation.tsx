@@ -9,7 +9,7 @@ interface PropsAnimate {
   duration?: number;
   delay?: number;
   className?: string;
-  updateUi?: boolean[];
+  updateUi?: any[];
   children: ReactNode | ReactNode[];
 }
 
