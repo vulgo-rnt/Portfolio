@@ -27,7 +27,7 @@ export default function Menu() {
               onClick={() => handler()}
               className={`${
                 path === "/" && "font-bold"
-              }  hover:text-tertiary  duration-1000`}
+              }  hover:text-tertiary dark:hover:text-tertiary_dark  duration-1000`}
             >
               Página Inicial
             </h2>
@@ -37,7 +37,7 @@ export default function Menu() {
               onClick={() => handler()}
               className={`${
                 path === "/projects" && "font-bold"
-              }  hover:text-tertiary duration-1000`}
+              }  hover:text-tertiary dark:hover:text-tertiary_dark duration-1000`}
             >
               Projetos
             </h2>
@@ -47,7 +47,7 @@ export default function Menu() {
               onClick={() => handler()}
               className={`${
                 path === "/about" && "font-bold"
-              }  hover:text-tertiary  duration-1000`}
+              }  hover:text-tertiary dark:hover:text-tertiary_dark  duration-1000`}
             >
               Sobre mim
             </h2>
@@ -57,7 +57,7 @@ export default function Menu() {
               onClick={() => handler()}
               className={`${
                 path === "/contact" && "font-bold"
-              }  hover:text-tertiary  duration-1000`}
+              }  hover:text-tertiary dark:hover:text-tertiary_dark  duration-1000`}
             >
               Contato
             </h2>

@@ -1,17 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ElementType, PropsWithChildren } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { ElementType, ReactNode, useEffect, useRef } from "react";
 
 interface PropsAnimate {
   animate: "left" | "right" | "up" | "down";
   tag?: ElementType;
   duration?: number;
+  delay?: number;
   className?: string;
+  updateUi?: boolean[];
+  children: ReactNode | ReactNode[];
 }
 
-export default function SlideAnimation(props: PropsWithChildren<PropsAnimate>) {
-  const setAnimate = ({ animate }: PropsAnimate) => {
+export default function SlideAnimation(props: PropsAnimate) {
+  const setAnimate = (animate: string) => {
     switch (animate) {
       case "left":
         return {
@@ -41,13 +44,22 @@ export default function SlideAnimation(props: PropsWithChildren<PropsAnimate>) {
 
   const MotionCustom = motion(props.tag || ("span" as ElementType));
 
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (inView) controls.start("animate");
+  }, [inView, controls, props.updateUi]);
+
   return (
     <MotionCustom
+      ref={ref}
       className={props.className}
-      variants={setAnimate(props)}
+      variants={setAnimate(props.animate)}
       initial="initial"
-      animate="animate"
-      transition={{ duration: props.duration || 1 }}
+      animate={controls}
+      transition={{ duration: props.duration || 1, delay: props.delay || 0 }}
     >
       {props.children}
     </MotionCustom>

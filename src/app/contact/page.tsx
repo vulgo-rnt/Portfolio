@@ -11,11 +11,11 @@ export default function Page() {
         tag="section"
         className="flex flex-col max-sm:text-center max-sm:items-center max-sm:mb-4 dark:text-color_btn_dark"
       >
-        <h1 className="text-xl">Obrigado por visitar meu portfólio!</h1>
+        <h1 className="text-xl">Contate-me</h1>
         <p className="mt-4 max-w-[330px]">
-          Se você tiver qualquer pergunta, desejar mais informações sobre meu
-          trabalho ou estiver interessado em uma colaboração, ficarei feliz em
-          ouvir de você.
+          Estou sempre disponível para uma conversa. Se você tiver alguma
+          pergunta, sugestão ou apenas quiser se conectar, me mande uma
+          mensagem.
         </p>
       </SlideAnimation>
       <SlideAnimation animate="left">

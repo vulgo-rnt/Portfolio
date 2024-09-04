@@ -1,3 +1,5 @@
+import CodeTable from "@/patterns/code-table";
+
 export default function Page() {
-  return <div>About</div>;
+  return <CodeTable />;
 }

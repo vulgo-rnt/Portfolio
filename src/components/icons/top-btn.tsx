@@ -1,7 +1,7 @@
 export function TopBtn() {
   return (
     <svg
-      className="fill-black dark:fill-[#4493f8] transition-colors duration-700"
+      className="fill-tertiary dark:fill-tertiary_dark transition-colors duration-700"
       width="80px"
       height="80px"
       viewBox="-8.5 0 32 32"

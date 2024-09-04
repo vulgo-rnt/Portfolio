@@ -1,19 +1,24 @@
 "use client";
 
-import { PropsWithChildren, ReactNode } from "react";
+import { ReactNode } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "@/styles/carousel.css";
 import { ArrowIcon } from "./icons/arrow";
 
-export default function Carousel({ children }: PropsWithChildren) {
-  const arrayOfElements = children as Array<ReactNode>;
+interface PropsCarousel {
+  children: ReactNode[];
+  slidesPerGroup?: number;
+  className?: string;
+  wrapperClassName?: string;
+}
 
+export default function Carousel(props: PropsCarousel) {
   return (
     <Swiper
+      slidesPerView={props.slidesPerGroup || 1}
       modules={[Pagination]}
       speed={700}
       pagination={{
@@ -21,9 +26,13 @@ export default function Carousel({ children }: PropsWithChildren) {
       }}
       tag="section"
       spaceBetween={40}
+      grabCursor
+      touchEventsTarget="container"
+      className={props.className}
+      wrapperClass={props.wrapperClassName}
     >
       <SlidePrevButton />
-      {arrayOfElements.map((el, index) => (
+      {props.children.map((el, index) => (
         <SwiperSlide key={index}>{el}</SwiperSlide>
       ))}
       <SlideNextButton />

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "selector",
+  darkMode: ["variant", "&:is(.dark *):not(.light *)"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -24,14 +24,15 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#0f141e",
-        secondary: "#878a8f",
-        tertiary: "#4493f8",
-        light_tertiary: "#caf0f8",
+        secondary: "#6c757d",
+        tertiary: "#1E90FF",
+        light_tertiary: "#c0e8fe",
         primary_dark: "#222C35",
-        secondary_dark: "#",
-        tertiary_dark: "#21262d",
-        light_tertiary_dark: "#30363d",
-        color_btn: "#f0f9ff",
+        secondary_dark: "#878a8f",
+        tertiary_dark: "#4493f8",
+        btn_dark: "#21262d",
+        light_btn_dark: "#30363d",
+        color_btn: "#fff",
         color_btn_dark: "#c9d1d9",
         menu_primary: "#000",
         menu_primary_dark: "#c0c1c6",
