@@ -4,7 +4,7 @@ import ScrollTopBtn from "@/components/scroll-top-btn";
 import SlideAnimation from "@/components/slide-animation";
 import { sora } from "@/styles/fonts";
 import SkillsSection from "@/patterns/skills-section";
-import Carousel from "@/components/carousel";
+import ServiceSection from "@/patterns/service-section";
 
 export default function Home() {
   return (
@@ -85,6 +85,7 @@ export default function Home() {
           </p>
         </span>
       </SlideAnimation>
+      <ServiceSection />
       <SkillsSection />
       <ScrollTopBtn />
     </main>

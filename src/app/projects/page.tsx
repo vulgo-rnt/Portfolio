@@ -17,8 +17,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
-      <h1 className="text-2xl dark:text-color_btn pb-8">
-        Confira meus projetos
+      <h2 className="text-md dark:text-color_btn_dark">
+        Confira meus projetos.
+      </h2>
+      <h1 className="text-5xl font-bold dark:text-color_btn_dark pb-10">
+        Experiência.
       </h1>
       <Carousel>
         <CardCapputeeno />

@@ -15,6 +15,10 @@ import {
 } from "@/components/code-table-components/styled-texts";
 
 export default function CodeTable() {
+  const birthday = new Date(2001, 7, 3);
+  const age = Math.abs(
+    new Date(Date.now() - birthday.getTime()).getUTCFullYear() - 1970
+  );
   return (
     <NumberedLines>
       <code>
@@ -80,7 +84,7 @@ export default function CodeTable() {
           <AspFuncBlue>{")"}</AspFuncBlue>
           <AspFunc>{")"}</AspFunc>
           <White>.</White>
-          <Function>getUTFFullYear</Function>
+          <Function>getUTCFullYear</Function>
           <AspFunc>{"("}</AspFunc>
           <AspFunc>{")"}</AspFunc>
           <White> - </White>
@@ -91,7 +95,7 @@ export default function CodeTable() {
           <White>;</White>
         </div>
         <div>
-          <Comment>{"// return 22"}</Comment>
+          <Comment>{`// return ${age}`}</Comment>
         </div>
         <div>
           <Variable>let </Variable>

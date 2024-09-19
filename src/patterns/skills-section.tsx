@@ -58,7 +58,7 @@ export default function SkillsSection() {
 
         <div className="flex flex-col gap-10">
           <SlideAnimation
-            className="w-full flex flex-col items-end "
+            className="w-full flex flex-col items-end"
             animate="left"
             duration={1.5}
             delay={0.5}

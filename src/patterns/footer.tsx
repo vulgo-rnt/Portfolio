@@ -1,4 +1,5 @@
 import BtnPrimary from "@/components/btn-primary";
+import Divider from "@/components/divider";
 import {
   AboutMe,
   Github,
@@ -15,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="w-full">
       <WrapperClientRender>
-        <span className="mx-4 h-[1px] bg-secondary flex"></span>
+        <Divider />
         <section className="md:py-10 py-[20px] flex flex-col items-center gap-5 dark:text-color_btn_dark">
           <h1 className="text-xl">Obrigado por visitar meu portfólio!</h1>
           <p className="text-[14px] opacity-[90%] max-w-[620px] text-center p-5">
@@ -37,7 +38,7 @@ export default function Footer() {
           </div>
         </section>
       </WrapperClientRender>
-      <span className="mx-4 h-[1px] bg-secondary flex"></span>
+      <Divider />
       <section className="flex flex-col gap-2 items-center py-5">
         <LogoIcon />
         <div className="flex gap-2 mt-2">

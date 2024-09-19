@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function NextJs() {
   return (
-    <Link href="" target="_blank">
+    <Link href="https://nextjs.org/" target="_blank">
       <svg
         width="80px"
         height="80px"
