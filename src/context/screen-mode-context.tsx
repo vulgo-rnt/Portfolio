@@ -38,6 +38,7 @@ export const ScreenModeProvider: React.FC<PropsWithChildren> = ({
   }, []);
 
   useEffect(() => {
+    if (typeof localStorage === "undefined") return;
     document.querySelector("html")?.classList.toggle("dark");
   }, [mode]);
 
