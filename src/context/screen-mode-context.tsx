@@ -30,7 +30,12 @@ export const ScreenModeProvider: React.FC<PropsWithChildren> = ({
 
   useEffect(() => {
     if (typeof localStorage === "undefined") return;
-    const saveMode = JSON.parse(localStorage.getItem("dark-mode") ?? "false");
+    const prefersColorScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+    const saveMode = JSON.parse(
+      localStorage.getItem("dark-mode") ?? `${prefersColorScheme.matches}`
+    );
     setMode(() => {
       setLoading(false);
       return saveMode;
