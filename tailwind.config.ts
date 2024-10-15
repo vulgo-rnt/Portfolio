@@ -9,6 +9,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    minHeight: {
+      headerless_screen: "calc(100vh - 96px)",
+    },
     screens: {
       xxsm: "410px",
       xsm: "500px",

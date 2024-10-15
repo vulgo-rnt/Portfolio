@@ -46,9 +46,12 @@ export default function SkillsSection() {
     return (
       <div className="overflow-hidden flex flex-col gap-5">
         <div className="flex justify-between">
-          <h1 className="ml-4 font-medium dark:text-color_btn_dark text-4xl max-sm:text-3xl">
-            Habilidades
-          </h1>
+          <span className="dark:text-color_btn_dark">
+            <h2>Oque tenho experiência.</h2>
+            <h1 className="text-5xl tracking-wider font-medium max-sm:text-4xl max-sm:tracking-widest">
+              Habilidades
+            </h1>
+          </span>
           {mode && (
             <button onClick={() => setColorIcon((prev) => !prev)}>
               <ColorWheel colorMode={colorIcon} />
@@ -64,7 +67,7 @@ export default function SkillsSection() {
             delay={0.5}
             updateUi={[colorIcon, mode, width]}
           >
-            <h2 className="text-xl dark:text-color_btn_dark font-light italic p-5">
+            <h2 className="text-2xl dark:text-color_btn_dark font-light italic p-5">
               Front-End
             </h2>
             <Carousel
@@ -94,7 +97,7 @@ export default function SkillsSection() {
             className="w-full flex flex-col"
             updateUi={[colorIcon, mode, width]}
           >
-            <h2 className="text-xl dark:text-color_btn_dark font-light italic p-5">
+            <h2 className="text-2xl dark:text-color_btn_dark font-light italic p-5">
               Back-End
             </h2>
             <Carousel
@@ -124,7 +127,7 @@ export default function SkillsSection() {
             delay={0.5}
             updateUi={[colorIcon, mode, width]}
           >
-            <h2 className="text-xl dark:text-color_btn_dark font-light italic p-5">
+            <h2 className="text-2xl dark:text-color_btn_dark font-light italic p-5">
               Devops Qa
             </h2>
             <Carousel

@@ -20,9 +20,7 @@ export default function Page() {
       <h2 className="text-md dark:text-color_btn_dark">
         Confira meus projetos.
       </h2>
-      <h1 className="text-5xl font-bold dark:text-color_btn_dark pb-10">
-        Experiência.
-      </h1>
+      <h1 className="text-5xl dark:text-color_btn_dark pb-10">Experiência</h1>
       <Carousel>
         <CardCapputeeno />
         <CardBreweries />

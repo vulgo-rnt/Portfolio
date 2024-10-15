@@ -8,13 +8,9 @@ export function AboutMe({ btn }: { btn?: boolean }) {
         btn ? "stroke-color_btn" : "stroke-primary"
       } dark:stroke-secondary_dark group-hover:stroke-tertiary dark:group-hover:stroke-tertiary_dark transition-colors duration-700`}
     >
-      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-      <g
-        id="SVGRepo_tracerCarrier"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      ></g>
-      <g id="SVGRepo_iconCarrier">
+      <g strokeWidth="0"></g>
+      <g strokeLinecap="round" strokeLinejoin="round"></g>
+      <g>
         <circle cx="12" cy="9" r="3" strokeWidth="1.5"></circle>
         <circle cx="12" cy="12" r="10" strokeWidth="1.5"></circle>
         <path

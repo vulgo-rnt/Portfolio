@@ -37,3 +37,7 @@ export * from "@/components/icons/logo";
 export * from "@/components/icons/btc";
 export * from "@/components/icons/puppeteer";
 export * from "@/components/icons/javascript";
+export * from "@/components/icons/landing-page";
+export * from "@/components/icons/e-commerce";
+export * from "@/components/icons/support";
+export * from "@/components/icons/automation";
